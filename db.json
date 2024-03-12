@@ -1,0 +1,33 @@
+{
+  "companyInfo": {
+    "name": "주식회사 팀스파르타",
+    "desctiption": "우리회사에 대한 설명입니다. blablabla~~~~~~",
+    "image": "http://~~~~"
+  },
+  "todos": [
+    {
+      "id": "ec5d",
+      "title": "넥스트 공부하기",
+      "body": "진짜 하기싫다",
+      "isDone": true
+    },
+    {
+      "id": "66bd",
+      "title": "넥스트",
+      "body": "개어렵네",
+      "isDone": false
+    },
+    {
+      "id": "aldf",
+      "title": "title",
+      "body": "body",
+      "isDone": false
+    },
+    {
+      "id": "8973f6e5-984d-4eca-a09a-a5a32aa6bb45",
+      "title": "하 뭐냐?",
+      "body": "진짜 뭐냐?",
+      "isDone": true
+    }
+  ]
+}
