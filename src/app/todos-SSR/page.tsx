@@ -30,7 +30,7 @@ const SsrPage = () => {
   }, []);
   return (
     <div className="flex flex-col">
-      <div className="flex p-3 justify-between p-5">
+      <div className="flex justify-between p-5">
         <h2 className="text-3xl font-bold">Next+TS TodoList</h2>
         <Link href="/report">
           <Button className="shadow-lg bg-teal-600 bg-gradient-to-tr text-white">

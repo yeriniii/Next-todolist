@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 interface Info {
   name: string;
-  desctiption: string;
+  description: string;
   image: string;
 }
 const AboutPage = () => {
@@ -31,7 +31,7 @@ const AboutPage = () => {
             />
           </div>
           <h2 className="font-bold text-2xl">{info?.name}</h2>
-          <h2 className="text-lg">{info?.desctiption}</h2>
+          <h2 className="text-lg">{info?.description}</h2>
         </>
       )}
     </div>
