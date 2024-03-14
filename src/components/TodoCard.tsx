@@ -47,7 +47,7 @@ const TodoCard = ({ todo }: { todo: Todo }) => {
       <div className="flex justify-center mt-7">
         <button
           className="w-40 h-10 rounded-full m-1 bg-pink-500 text-white font-medium hover:bg-pink-600 focus:outline-none focus:bg-pink-600"
-          onClick={() => mutateToDelete(todo)}
+          onClick={() => mutateToDelete(id)}
         >
           삭제
         </button>

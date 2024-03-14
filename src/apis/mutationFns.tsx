@@ -1,7 +1,7 @@
 import { Todo } from "@/types";
 
 const addTodo = async (todo: Todo): Promise<Todo> => {
-  const response = await fetch(`http://localhost:4000/todos`, {
+  const response = await fetch(`/api/todos`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,15 +11,16 @@ const addTodo = async (todo: Todo): Promise<Todo> => {
   const data = await response.json();
   return data;
 };
-const deleteTodo = async (todo: Todo): Promise<Todo> => {
-  const response = await fetch(`http://localhost:4000/todos/${todo.id}`, {
+const deleteTodo = async (id: string): Promise<Todo> => {
+  const response = await fetch(`/api/todos/${id}`, {
     method: "DELETE",
+    body: JSON.stringify(id),
   });
   const data = await response.json();
   return data;
 };
 const toggleTodo = async (todo: Todo): Promise<Todo> => {
-  const response = await fetch(`http://localhost:4000/todos/${todo.id}`, {
+  const response = await fetch(`/api/todos/${todo.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

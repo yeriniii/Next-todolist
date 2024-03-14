@@ -4,3 +4,4 @@ export type Todo = {
   body: string;
   isDone: boolean;
 };
+export type Todos = Array<Todo>;

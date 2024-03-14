@@ -1,33 +1,51 @@
 {
   "companyInfo": {
-    "name": "주식회사 팀스파르타",
-    "desctiption": "우리회사에 대한 설명입니다. blablabla~~~~~~",
-    "image": "http://~~~~"
+    "name": "몬스터 주식회사",
+    "desctiption": "우리회사에 대한 설명입니다.",
+    "image": "https://i.ibb.co/NZX1FBS/6.jpg"
   },
   "todos": [
-    {
-      "id": "ec5d",
-      "title": "넥스트 공부하기",
-      "body": "진짜 하기싫다",
-      "isDone": true
-    },
     {
       "id": "66bd",
       "title": "넥스트",
       "body": "개어렵네",
-      "isDone": false
-    },
-    {
-      "id": "aldf",
-      "title": "title",
-      "body": "body",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "8973f6e5-984d-4eca-a09a-a5a32aa6bb45",
       "title": "하 뭐냐?",
       "body": "진짜 뭐냐?",
+      "isDone": false
+    },
+    {
+      "id": "6aa8",
+      "title": "asdf",
+      "body": "adsf",
       "isDone": true
+    },
+    {
+      "id": "3dfd",
+      "title": "어렵다..",
+      "body": "어려워ㅓ..",
+      "isDone": true
+    },
+    {
+      "id": "3ef4",
+      "title": "너무어렵다",
+      "body": "너무너무어렵다..",
+      "isDone": true
+    },
+    {
+      "id": "caae",
+      "title": "뭐한거지",
+      "body": "모루겠음",
+      "isDone": true
+    },
+    {
+      "id": "0799",
+      "title": "......",
+      "body": "...................",
+      "isDone": false
     }
   ]
 }

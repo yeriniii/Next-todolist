@@ -15,6 +15,7 @@ const TodoForm = () => {
   });
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     mutateToAdd({
       id: crypto.randomUUID(),
       title,
@@ -25,7 +26,7 @@ const TodoForm = () => {
     setBody("");
   };
   return (
-    <div className="bg-[#f5f5f5] flex rounded-2xl border-hidden p-5 justify-center">
+    <div className="bg-[#f5f5f5] bg-opacity-80 flex rounded-2xl border-hidden p-5 justify-center">
       <form onSubmit={handleSubmit}>
         <strong className="text-black">제목 :</strong>
         <input
@@ -41,7 +42,7 @@ const TodoForm = () => {
           placeholder="내용을 입력해주세요"
           onChange={(e) => setBody(e.target.value)}
         />
-        <button className="bg-teal-600 rounded-3xl ml-5 border-none p-2 px-5 text-white font-bold">
+        <button className="bg-teal-600 rounded-3xl ml-5 border-none p-2 px-5 text-white font-medium">
           추가하기
         </button>
       </form>
