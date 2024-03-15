@@ -1,25 +1,16 @@
-"use client";
-
-import { Todos } from "@/types";
-import React, { useEffect, useState } from "react";
+import { Todo, Todos } from "@/types";
+import React from "react";
 import Link from "next/link";
-const ReportPage = () => {
-  const [todos, setTodos] = useState<Todos>([]);
-  useEffect(() => {
-    const fetchDataTodos = async () => {
-      const response = await fetch(`http://localhost:4000/todos`, {
-        next: {
-          revalidate: 10,
-        },
-      });
-      const results = await response.json();
+const ReportPage = async () => {
+  const response = await fetch(`http://localhost:4000/todos`, {
+    next: {
+      revalidate: 10,
+    },
+  });
+  const todos: Todos = await response.json();
 
-      setTodos(results);
-    };
-    fetchDataTodos();
-  }, []);
-  const workingTodos = todos.filter((todo) => todo.isDone === false);
-  const doneTodos = todos.filter((todo) => todo.isDone === true);
+  const workingTodos = todos.filter((todo: Todo) => todo.isDone === false);
+  const doneTodos = todos.filter((todo: Todo) => todo.isDone === true);
   return (
     <div className="flex flex-col items-center mt-12 space-y-8">
       <div className="max-w-sm rounded-xl overflow-hidden shadow-lg">
@@ -45,7 +36,7 @@ const ReportPage = () => {
       <div className="container mt-4 mx-auto">
         <h2 className="font-bold text-xl">진행 중인 할일 목록 </h2>
         <div className="mt-3 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {workingTodos.map((work) => {
+          {workingTodos.map((work: Todo) => {
             return (
               <div
                 key={work.id}
@@ -59,7 +50,7 @@ const ReportPage = () => {
         </div>
         <h2 className="mt-3 font-bold text-xl">완료한 할일 목록</h2>
         <div className="mt-3 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {doneTodos.map((work) => {
+          {doneTodos.map((work: Todo) => {
             return (
               <div
                 key={work.id}

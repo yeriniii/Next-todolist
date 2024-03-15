@@ -10,7 +10,7 @@ export async function DELETE(
 ) {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:4000/todos/${id}`, {
+  const response = await fetch(`${process.env.NEXT_SERVER_URL}/todos/${id}`, {
     method: "DELETE",
   });
 
@@ -35,7 +35,7 @@ export async function PATCH(
 ) {
   const { id } = params;
   const { isDone } = await request.json();
-  const response = await fetch(`http://localhost:4000/todos/${id}`, {
+  const response = await fetch(`${process.env.NEXT_SERVER_URL}/todos/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

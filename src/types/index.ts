@@ -5,3 +5,8 @@ export type Todo = {
   isDone: boolean;
 };
 export type Todos = Array<Todo>;
+export type Info = {
+  name: string;
+  description: string;
+  image: string;
+};

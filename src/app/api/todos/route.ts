@@ -1,5 +1,5 @@
 export async function GET() {
-  const response = await fetch("http://localhost:4000/todos");
+  const response = await fetch(`${process.env.NEXT_SERVER_URL}/todos`);
   const todos = await response.json();
   return new Response(JSON.stringify(todos), {
     status: 200,
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch("http://localhost:4000/todos", {
+  const response = await fetch(`${process.env.NEXT_SERVER_URL}/todos`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, body, isDone: false }),
